@@ -1,0 +1,25 @@
+.top-bar{
+    height: 40px;
+}
+#search{
+    background-color: white;
+    border-radius: 25px;
+    height: 40px;
+    margin: 10px;
+}
+.row{
+    margin: 0;
+}
+.icons{
+    width: 20px;
+    height: 20px;
+    margin: 5px 15px;
+}
+#logo{
+   height: 40px;
+   width: auto;
+   margin: 10px;
+}
+.nav-wrapper{
+    background-color: #3D3561;
+}
