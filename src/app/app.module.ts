@@ -10,7 +10,9 @@ import { CotizarComponent } from './Components/cotizar/cotizar.component';
 import { LandingComponent } from './Components/landing/landing.component';
 import { ProductPageComponent } from './Components/product-page/product-page.component';
 import { CotizacionComponent } from './Components/cotizacion/cotizacion.component';
-import { HomepageComponent } from './Components/homepage/homepage.component'
+import { HomepageComponent } from './Components/homepage/homepage.component';
+import { ProductCardComponent } from './Components/product-card/product-card.component';
+import { ProductListComponent } from './Components/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { HomepageComponent } from './Components/homepage/homepage.component'
     LandingComponent,
     ProductPageComponent,
     CotizacionComponent,
-    HomepageComponent
+    HomepageComponent,
+    ProductCardComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,

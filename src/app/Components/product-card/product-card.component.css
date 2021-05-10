@@ -1,0 +1,16 @@
+.btn{
+    background-color: #0CB4D4;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+.card-title{
+    font-weight: bold;
+    color: #2A001D !important;
+}
+.cat{
+    color:#9A999E;
+}
+.qty{
+    color: #B4047C;
+}
