@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ProductsService } from '../../Services/products.service';
 
 
@@ -7,12 +7,17 @@ import { ProductsService } from '../../Services/products.service';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent implements OnInit {
+export class ProductListComponent implements OnInit, AfterViewInit {
 
   constructor(public productService: ProductsService  ) { }
 
   ngOnInit(): void {
+      
    this.getProducts();
+  }
+  ngAfterViewInit(){
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, {});
   }
   getProducts(){
     this.productService.getProducts().subscribe(
