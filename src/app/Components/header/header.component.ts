@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener  } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  isScrolled = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -16,6 +16,20 @@ export class HeaderComponent implements OnInit {
         
       });
     });
+  }
+  @HostListener("window:scroll")
+  scrollEvent() {
+    this.isScrolled = window.pageYOffset >= 50;
+}
+
+
+  onWindowScroll() {
+   var element = document.querySelector('.nav-wrapper') as HTMLElement;
+    if (window.pageYOffset > element.clientHeight) {
+      element.classList.add('navbar-inverse');
+    } else {
+      element.classList.remove('navbar-inverse');
+    }
   }
 
 }

@@ -23,3 +23,7 @@
 .nav-wrapper{
     background-color: #3D3561;
 }
+.navbar-inverse{
+    top:0%;
+    background-color: #B4047C;
+}
