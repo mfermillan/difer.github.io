@@ -15,6 +15,9 @@ import { HomepageComponent } from './Components/homepage/homepage.component';
 import { ProductCardComponent } from './Components/product-card/product-card.component';
 import { ProductListComponent } from './Components/product-list/product-list.component';
 
+import {ProductsService} from './Services/products.service';
+import { TarjetaCarritoComponent } from './Components/tarjeta-carrito/tarjeta-carrito.component'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,14 +30,15 @@ import { ProductListComponent } from './Components/product-list/product-list.com
     CotizacionComponent,
     HomepageComponent,
     ProductCardComponent,
-    ProductListComponent
+    ProductListComponent,
+    TarjetaCarritoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     HttpClientModule
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

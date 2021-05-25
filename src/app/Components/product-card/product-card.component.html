@@ -7,10 +7,10 @@
         <div class="card-content">
             <p class="cat">{{product.category}}</p>
             <span class="card-title">{{product.title}}</span>
-            <small class="qty">{{product.qty}}</small>
+            <small class="qty">{{product.qty}} {{product.qty_name}}</small>
         </div>
         <div class="card-action center-align">
-            <a class="btn modal-trigger" data-target="modal1">Cotizar</a>
+            <a class="btn" (click)="handleAddToCart()">Cotizar</a>
         </div>
     </div>
 </div>

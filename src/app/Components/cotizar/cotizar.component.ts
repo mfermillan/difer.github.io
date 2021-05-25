@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input,OnInit } from '@angular/core';
+import { ProductsService } from '../../Services/products.service';
 @Component({
   selector: 'app-cotizar',
   templateUrl: './cotizar.component.html',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CotizarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public productService: ProductsService) { }
 
   ngOnInit(): void {
+    console.log(this.productService.getCart())
   }
 
 }

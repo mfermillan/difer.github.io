@@ -1,7 +1,11 @@
 export interface Producto{
-    id: string
+    _id: string
     title: string
     category: string
-    qty: string
+    qty: number
+    qty_name: string
     img: string
+    updatedAt:string
+    createdAt:string
+    qty_cart: number
 }
