@@ -12,14 +12,14 @@
       <a href="#" class="brand-logo col s3 m2 l2 push-l1 push-s2 push-m2 valign-wrapper">
         <img src="../../../assets/Images/logo.png"  id= "logo">
       </a>
-      <form class="col s7 m5 l3">
+      <form class="col s7 m5 l3" #searchForm="ngForm" (ngSubmit)="searchbox(searchForm)">
           <div class=" row input-field">
              <div class= "right col s3">
               <button type="submit" class= "btn-flat right"><i class="material-icons white-text">search</i></button>
              </div>
             
             <div class= "input-field col s9" appearance="outline">
-              <input id="search" type="search">
+              <input id="search" name="search" [(ngModel)]="search">
             </div>
             
           </div>

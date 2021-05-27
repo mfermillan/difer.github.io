@@ -1,4 +1,6 @@
+import { SelectorMatcher } from '@angular/compiler';
 import { Component, OnInit, HostListener  } from '@angular/core';
+import {NgForm} from '@angular/forms'
 
 @Component({
   selector: 'app-header',
@@ -8,7 +10,7 @@ import { Component, OnInit, HostListener  } from '@angular/core';
 export class HeaderComponent implements OnInit {
   isScrolled = false;
   constructor() { }
-
+  search = ''
   ngOnInit(): void {
     document.addEventListener('DOMContentLoaded', function() {
       var elems = document.querySelectorAll('.sidenav');
@@ -30,6 +32,10 @@ export class HeaderComponent implements OnInit {
     } else {
       element.classList.remove('navbar-inverse');
     }
+  }
+
+  searchbox(form:NgForm){
+    console.log(form.value)
   }
 
 }

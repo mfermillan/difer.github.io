@@ -1,64 +1,56 @@
 <div class="row ">
-    <div class="  col l10 push-l1">
-        <div class= "row valign-wrapper">
-            <h5 class= " col l6 left-align">Lista a cotizar</h5>
-            <small class= " col l6 right-align"><strong>ID cotización: XXXXXXXXX</strong> </small>
-        </div>
-        <div class="row valign-wrapper">
-            <div class=" col l6 ">
-                <small>Compartenos tus datos</small>
-                <div class="row">
-                    <form class="col s12">
-                      <div class="row">
-                        <div class="input-field col s6">
-                          <input id="first_name" type="text" class="validate">
-                          <label for="first_name">Nombre</label>
-                        </div>
-                        <div class="input-field col s6">
-                          <input id="last_name" type="text" class="validate">
-                          <label for="last_name">Apellido</label>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="input-field col s12">
-                          <input type="text" class="validate">
-                          <label for="disabled">Papelería</label>
-                        </div>
-                      </div>
-                      
-                    </form>
-                  </div>
-                        
-            </div>
-            <div class=" col l6">
-                <small>Información de entrega</small>
-                <div class="row">
-                    <form class="col s12">
-                      <div class="row">
-                        <div class="input-field col s6">
-                          <input id="first_name" type="text" class="validate">
-                          <label for="first_name">CP</label>
-                        </div>
-                        <div class="input-field col s6">
-                          <input id="last_name" type="text" class="validate">
-                          <label for="last_name">Colonia</label>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="input-field col s12">
-                          <input type="text" class="validate">
-                          <label for="disabled">Calle y numero</label>
-                        </div>
-                      </div>
-                      
-                    </form>
-                  </div>
-            </div>
-        </div>
-        <div class= "col l2 push-l5">
-            <a class="btn-large " routerLink="/cotizacion" >Cotizar</a>
-        </div>
+  <div class="  col l10 push-l1">
+    <div class="row valign-wrapper">
+      <h5 class=" col l6 left-align">Lista a cotizar</h5>
+      <small class=" col l6 right-align"><strong>ID cotización: XXXXXXXXX</strong> </small>
     </div>
+    <form class="col s12" #cotizarForm="ngForm" (ngSubmit)="cotizar(cotizarForm)">
+      <div class="row valign-wrapper">
+        <div class=" col l6 ">
+          <small>Compartenos tus datos</small>
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="first_name" type="text" class="validate" name="nombre" [(ngModel)]="cotizacion.nombre">
+              <label for="first_name">Nombre</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" class="validate" name="apellido" [(ngModel)]="cotizacion.apellido">
+              <label for="last_name">Apellido</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" class="validate" name="papeleria">
+              <label>Papelería</label>
+            </div>
+          </div>
+        </div>
+        <div class=" col l6">
+          <small>Información de entrega</small>
+          <div class="row">
+            <div class="row">
+              <div class="input-field col s6">
+                <input  type="text" class="validate" name="cp" [(ngModel)]="cotizacion.cp">
+                <label for="first_name">CP</label>
+              </div>
+              <div class="input-field col s6">
+                <input type="text" class="validate" name="colonia" [(ngModel)]="cotizacion.colonia">
+                <label for="last_name">Colonia</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" class="validate" name="direccion" [(ngModel)]="cotizacion.direccion">
+                <label>Calle y numero</label>
+              </div>
+            </div>
+            <div class="col l2 push-l5">
+              <button class="btn-large " routerLink="/cotizacion" [(ngModel)]="cotizacion" >Cotizar</button>
+            </div>
 
-    
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>

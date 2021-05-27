@@ -11,7 +11,7 @@ export class TarjetaCarritoComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  addToCart(){
-    this.productService.addToCart(this.product);
+  addToCart(product:any){
+    this.productService.addToCart(product);
   }
 }

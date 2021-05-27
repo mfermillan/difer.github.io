@@ -1,4 +1,7 @@
+import { ConvertActionBindingResult } from '@angular/compiler/src/compiler_util/expression_converter';
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from '@angular/forms'
+import { Contacto } from '../../Models/contacto';
 
 @Component({
   selector: 'app-cotizacion',
@@ -6,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cotizacion.component.css']
 })
 export class CotizacionComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  cotizacion: Contacto | undefined
+  constructor() {
+    this.cotizacion = new Contacto()
   }
 
+  ngOnInit(): void {
+    
+  }
+
+  cotizar(form:NgForm){
+    console.log(form.value)
+  }
 }

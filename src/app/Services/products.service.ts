@@ -40,18 +40,17 @@ export class ProductsService {
   }
 
   isDuplicated(id:any){
-    for (var i = 0; i <= this.cart_items.length - 1; i++) {
-      
+    console.log(this.cart_items)
+    for (var i = 0; i <= this.cart_items.length-1; i++) {
       if (id === this.cart_items[i]._id) {
+        console.log("duplicado")
           return true;
       }
-      return false
-      
     }
     return false;
   }
   getDuplicatedId(id:any){
-    for (var i = 0; i < this.cart_items.length - 1; i++) {
+    for (var i = 0; i <= this.cart_items.length - 1; i++) {
       if (id === this.cart_items[i]._id) {
         console.log(i);
           return i;
